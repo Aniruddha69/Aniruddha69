@@ -1,0 +1,46 @@
+name: GitHub Metrics Generator
+
+on:
+  # Schedule daily updates at midnight
+  schedule:
+    - cron: "0 0 * * *"
+  # Allow manual triggers from the Actions tab
+  workflow_dispatch:
+  # Run on every push to the main branch
+  push:
+    branches: ["main", "master"]
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Generate GitHub Metrics
+        uses: lowlighter/metrics@latest
+        with:
+          filename: github-metrics.svg
+          # GitHub Personal Access Token
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          # 1. Base content for user
+          base: header, activity, community, repositories, metadata
+          
+          # 2. Repositories traffic
+          plugin_traffic: yes
+          
+          # 3. Repository licenses
+          plugin_licenses: yes
+          
+          # 4. Gists
+          plugin_gists: yes
+          
+          # 5. Isometric commit calendar (full year)
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          
+          # 6. WakaTime
+          plugin_wakatime: yes
+          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+          plugin_wakatime_days: 365
+          plugin_wakatime_sections: time, languages, languages-graphs, editors, os
