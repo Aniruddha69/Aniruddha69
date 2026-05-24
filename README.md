@@ -1,4 +1,10 @@
-## Hi there 👋
+# 👋 Hi, I'm Aniruddha
+
+Here are my GitHub and Coding statistics:
+
+<div align="center">
+  <img src="github-metrics.svg" alt="GitHub Metrics" />
+</div>
 
 <!--
 **Aniruddha69/Aniruddha69** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
