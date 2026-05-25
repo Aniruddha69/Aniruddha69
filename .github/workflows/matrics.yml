@@ -63,8 +63,8 @@ jobs:
           
           # Configure Git to use YOUR personal details
           # IMPORTANT: Change the email and username below!
-          git config user.email "YOUR_GITHUB_EMAIL@EXAMPLE.COM"
-          git config user.name "YOUR_USERNAME"
+          git config user.email "107599986+Aniruddha69@users.noreply.github.com"
+          git config user.name "Aniruddha69"
           
           # Create an empty commit and push it
           git commit --allow-empty -m "chore: sync daily metrics"
