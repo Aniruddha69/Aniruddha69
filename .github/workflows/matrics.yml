@@ -20,8 +20,12 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           filename: github-metrics.svg
-          # GitHub Personal Access Token
+          
+          # GitHub Personal Access Token (for fetching data)
           token: ${{ secrets.METRICS_TOKEN }}
+          
+          # THIS LINE FIXES THE COMMIT ERROR: Uses built-in token to write
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
 
           # 1. Base content for user
           base: header, activity, community, repositories, metadata
@@ -29,8 +33,8 @@ jobs:
           # 2. Repositories traffic
           plugin_traffic: yes
           
-          # 3. Repository licenses
-          plugin_licenses: yes
+          # 3. Repository licenses (Disabled to prevent "Unsupported context user" crash)
+          plugin_licenses: no
           
           # 4. Gists
           plugin_gists: yes
@@ -61,8 +65,7 @@ jobs:
           # Pull the new SVG commit that the metrics bot just created
           git pull origin ${{ github.ref_name }}
           
-          # Configure Git to use YOUR personal details
-          # IMPORTANT: Change the email and username below!
+          # Configure Git to use your personal details
           git config user.email "107599986+Aniruddha69@users.noreply.github.com"
           git config user.name "Aniruddha69"
           
