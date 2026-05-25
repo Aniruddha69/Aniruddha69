@@ -6,9 +6,7 @@ on:
     - cron: "0 0 * * *"
   # Allow manual triggers from the Actions tab
   workflow_dispatch:
-  # Run on every push to the main branch
-  push:
-    branches: ["main", "master"]
+  # (The 'push' trigger has been completely removed to stop the loop!)
 
 jobs:
   github-metrics:
@@ -24,7 +22,7 @@ jobs:
           # GitHub Personal Access Token (for fetching data)
           token: ${{ secrets.METRICS_TOKEN }}
           
-          # THIS LINE FIXES THE COMMIT ERROR: Uses built-in token to write
+          # Uses built-in token to write
           committer_token: ${{ secrets.GITHUB_TOKEN }}
 
           # 1. Base content for user
@@ -33,7 +31,7 @@ jobs:
           # 2. Repositories traffic
           plugin_traffic: yes
           
-          # 3. Repository licenses (Disabled to prevent "Unsupported context user" crash)
+          # 3. Repository licenses
           plugin_licenses: no
           
           # 4. Gists
@@ -57,7 +55,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          # FIX: Use the built-in token here to prevent action looping
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       # Make an empty commit as YOU to trigger the contribution graph
       - name: Register contribution on GitHub graph
