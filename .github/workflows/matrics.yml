@@ -44,3 +44,28 @@ jobs:
           plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
           plugin_wakatime_days: 365
           plugin_wakatime_sections: time, languages, languages-graphs, editors, os
+
+      # -------------------------------------------------------------
+      # NEW STEPS: Force the green square contribution
+      # -------------------------------------------------------------
+      
+      # Checkout the repository to run Git commands
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+
+      # Make an empty commit as YOU to trigger the contribution graph
+      - name: Register contribution on GitHub graph
+        run: |
+          # Pull the new SVG commit that the metrics bot just created
+          git pull origin ${{ github.ref_name }}
+          
+          # Configure Git to use YOUR personal details
+          # IMPORTANT: Change the email and username below!
+          git config user.email "YOUR_GITHUB_EMAIL@EXAMPLE.COM"
+          git config user.name "YOUR_USERNAME"
+          
+          # Create an empty commit and push it
+          git commit --allow-empty -m "chore: sync daily metrics"
+          git push
