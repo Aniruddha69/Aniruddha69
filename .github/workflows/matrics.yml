@@ -3,7 +3,7 @@ name: GitHub Metrics Generator
 on:
   # Schedule daily updates at midnight
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "30 6 * * *"
   # Allow manual triggers from the Actions tab
   workflow_dispatch:
   # (The 'push' trigger has been completely removed to stop the loop!)
@@ -42,10 +42,10 @@ jobs:
           plugin_isocalendar_duration: full-year
           
           # 6. WakaTime
-          plugin_wakatime: yes
-          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
-          plugin_wakatime_days: 365
-          plugin_wakatime_sections: time, languages, languages-graphs, editors, os
+         #plugin_wakatime: yes
+         #plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
+         #plugin_wakatime_days: 365
+         #plugin_wakatime_sections: time, languages, languages-graphs, editors, os
 
       # -------------------------------------------------------------
       # NEW STEPS: Force the green square contribution
