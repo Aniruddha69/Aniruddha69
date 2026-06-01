@@ -3,7 +3,7 @@ name: GitHub Metrics Generator
 on:
   # Schedule daily updates at midnight
   schedule:
-    - cron: "30 6 * * *"
+    - cron: "0 6 * * *"
   # Allow manual triggers from the Actions tab
   workflow_dispatch:
   # (The 'push' trigger has been completely removed to stop the loop!)
