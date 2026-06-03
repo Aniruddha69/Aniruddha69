@@ -1,14 +1,14 @@
 # 💫 About Me:
 
-I am currently working on improving Windows working experience and improving it to be as productive as it could be. I am using open-source software and sharing my config files and also making dedicated repositories with a single line to fix or copy my whole conflict to the appropriate file and make it work in seconds with a single line in terminal
+- 🔭 I am currently working on improving Windows working experience and improving it to be as productive as it could be. I am using open-source software and sharing my config files and also making dedicated repositories with a single.        line to fix or copy my whole conflict to the appropriate file and make it work in seconds with a single line in.         terminal
 
-I am currently learning about Python, Rust, and golang
+- 🌱 I am currently learning about Python, Rust, and golang
 
-I need help learning this language because it is not easy like the Bash scripting language of powershell scripting language it's not that straightforward to do something this complicated in these three languages. Likewise, it to first it loops instead of just if else statement
+- 🤔 I need help learning this language because it is not easy like the Bash scripting language of powershell scripting language it's not that straightforward to do something this complicated in these three languages. Likewise, it to first it loops instead of just if else statement
 
-Ask me about anything that you want I could not be more Amaze to be asked random questions about my day and work
+- 💬 Ask me about anything that you want I could not be more Amaze to be asked random questions about my day and work
 
-Fun fact I am 10th grader
+- ⚡ Fun fact I am 10th grader
 
 
 ## 🌐 Socials:
