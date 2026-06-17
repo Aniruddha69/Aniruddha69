@@ -8,7 +8,10 @@
   
 - ​💬 Ask me about anything! I would be absolutely thrilled to answer questions about my Windows ricing workflow, my projects, or my day-to-day coding journey.
 
-- ⚡ Fun fact I am 10th grader
+- ⚡ Fun fact I am 10th grader. Coffee runs my life. 
+  
+> [!NOTE]
+>  If you find me without coffee! get help!
 
 
 ## 🌐 Socials:
