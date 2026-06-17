@@ -4,9 +4,9 @@
 
 - 🌱 I am currently learning about Python, Rust, and golang
 
-- 🤔 I need help learning this language because it is not easy like the Bash scripting language of powershell scripting language it's not that straightforward to do something this complicated in these three languages. Likewise, it to first it loops instead of just if else statement
-
-- 💬 Ask me about anything that you want I could not be more Amaze to be asked random questions about my day and work
+- ​🤔 I am always open to tips and guidance on Python, Rust, and Go! Transitioning from Bash and PowerShell scripting to handling complex logic and data structures in these languages has been a steep but exciting learning curve.
+  
+- ​💬 Ask me about anything! I would be absolutely thrilled to answer questions about my Windows ricing workflow, my projects, or my day-to-day coding journey.
 
 - ⚡ Fun fact I am 10th grader
 
