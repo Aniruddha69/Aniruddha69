@@ -10,7 +10,7 @@
 
 - ⚡ Fun fact I am 10th grader. Coffee runs my life. 
   
-> [!ALERT]
+> [!WARNING]
 >  If you find me without coffee! get help!
 
 
